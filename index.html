@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #35424a;
+            color: white;
+        }
+        #language-selector {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <h1>Language Learning App</h1>
+    </header>
+    <div class="container">
+        <h2>Choose a Language</h2>
+        <select id="language-selector">
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+        </select>
+        <div id="language-content">
+            <p>Select a language to see learning resources.</p>
+        </div>
+    </div>
+   
+    <script>
+        const languageSelector = document.getElementById('language-selector');
+        const languageContent = document.getElementById('language-content');
+
+        languageSelector.addEventListener('change', () => {
+            const selectedLanguage = languageSelector.value;
+            if (selectedLanguage === 'english') {
+                languageContent.innerHTML = '<p>Welcome to the English learning resources.</p>';
+            } else if (selectedLanguage === 'spanish') {
+                languageContent.innerHTML = '<p>Bienvenido a los recursos de aprendizaje de español.</p>';
+            } else if (selectedLanguage === 'french') {
+                languageContent.innerHTML = '<p>Bienvenue sur les ressources d\'apprentissage du français.</p>';
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2023 Language Learning App. All rights reserved.</p>
+    </footer>
+</div>
+</div>
+</body>
+</html>
