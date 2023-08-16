@@ -5,6 +5,10 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url(../img/students.jpg);
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: 100%;
         }
         header {
             background-color: #35424a;
